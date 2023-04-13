@@ -1,0 +1,64 @@
+﻿@model Aula8.Models.Projeto
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Projeto</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.NomeDoProjeto)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NomeDoProjeto)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DescrisaoDoProjeto)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DescrisaoDoProjeto)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DataDeInicioDoProjeto)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DataDeInicioDoProjeto)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DataDeTerminoDoProjeto)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DataDeTerminoDoProjeto)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EstadoDoProjeto)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EstadoDoProjeto)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

@@ -1,0 +1,63 @@
+﻿@model IEnumerable<Aula8.Models.Tarefa>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.NomeDaTarefa)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DescrisaoDaTarefa)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.StatusDaTarefa)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TempoParaRealizacaoDaTarefa)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DataDeInicioDaTarefa)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DataDeTerminoDaTarefa)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.NomeDaTarefa)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DescrisaoDaTarefa)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.StatusDaTarefa)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TempoParaRealizacaoDaTarefa)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DataDeInicioDaTarefa)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DataDeTerminoDaTarefa)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.Id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.Id })
+        </td>
+    </tr>
+}
+
+</table>

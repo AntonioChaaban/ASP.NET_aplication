@@ -1,0 +1,72 @@
+﻿@model Aula8.Models.Tarefa
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Tarefa</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.NomeDaTarefa)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NomeDaTarefa)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DescrisaoDaTarefa)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DescrisaoDaTarefa)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.StatusDaTarefa)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.StatusDaTarefa)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TempoParaRealizacaoDaTarefa)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TempoParaRealizacaoDaTarefa)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DataDeInicioDaTarefa)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DataDeInicioDaTarefa)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DataDeTerminoDaTarefa)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DataDeTerminoDaTarefa)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

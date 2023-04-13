@@ -1,0 +1,74 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+<style>
+    /* Estilos para os botões */
+    button {
+        padding: 10px 20px;
+        color: black;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        margin-bottom: 10px;
+        background-color: #0acad1;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+        button:hover {
+            opacity: 0.8;
+        }
+
+
+    /* Estilos para o formulário */
+    form {
+        margin-top: 20px;
+    }
+
+    label {
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    input[type="email"],
+    input[type="password"] {
+        padding: 10px;
+        border-radius: 5px;
+        border: 1px solid black;
+        margin-bottom: 10px;
+    }
+
+    button[type="submit"] {
+        background-color: #008CBA;
+    }
+
+        button[type="submit"]:hover {
+            background-color: #006080;
+        }
+
+</style>
+
+<div class="row">
+    <div class="col-md-4">
+        <h1>Bem-vindo à Página de Login</h1>
+
+        <h2>Login com Google:</h2>
+        <button onclick="loginComGoogle()" style="background-image: url('https://www.gstatic.com/firebasejs/ui/2.0.0/images/auth/google.svg');">Login com Google</button>
+
+        <h2>Login com Facebook:</h2>
+        <button onclick="loginComFacebook()" style="background-image: url('https://www.gstatic.com/firebasejs/ui/2.0.0/images/auth/facebook.svg');">Login com Facebook</button>
+
+        <h2>Login pelo Sistema:</h2>
+        <form>
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email"><br><br>
+
+            <label for="senha">Senha:</label>
+            <input type="password" id="senha" name="senha"><br><br>
+
+            <button type="submit" onclick="loginPeloSistema()">Login pelo Sistema</button>
+        </form>
+
+    </div>
+</div>

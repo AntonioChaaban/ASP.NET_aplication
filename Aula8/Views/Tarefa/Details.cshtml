@@ -1,0 +1,66 @@
+﻿@model Aula8.Models.Tarefa
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Tarefa</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.NomeDaTarefa)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NomeDaTarefa)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DescrisaoDaTarefa)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DescrisaoDaTarefa)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.StatusDaTarefa)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.StatusDaTarefa)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TempoParaRealizacaoDaTarefa)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TempoParaRealizacaoDaTarefa)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DataDeInicioDaTarefa)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DataDeInicioDaTarefa)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DataDeTerminoDaTarefa)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DataDeTerminoDaTarefa)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

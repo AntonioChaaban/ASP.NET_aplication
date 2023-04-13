@@ -1,0 +1,65 @@
+﻿@model Aula8.Models.Projeto
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Projeto</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.NomeDoProjeto)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NomeDoProjeto)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DescrisaoDoProjeto)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DescrisaoDoProjeto)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DataDeInicioDoProjeto)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DataDeInicioDoProjeto)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DataDeTerminoDoProjeto)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DataDeTerminoDoProjeto)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EstadoDoProjeto)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EstadoDoProjeto)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Usuarios)
+        </dt>
+
+        <dd>
+            @Html.ActionLink("Ver Participantes do Projeto", "ParticipantesDoProjeto", new { id = Model.Id})
+        </dd>
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -1,0 +1,52 @@
+﻿@model IEnumerable<Aula8.Models.Usuario>
+
+@{
+    ViewBag.Title = "AdicionarParticipantesDoProjeto";
+}
+
+<h2>AdicionarParticipantesDoProjeto</h2>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Nome)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Email)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Cargo)
+        </th>
+        <th></th>
+    </tr>
+    @{
+        int? idProjeto = 0;
+        foreach (var item in Model)
+        {
+            foreach (var projeto in item.Projetos)
+            {
+                    idProjeto = projeto.Id;
+            }
+        }
+    }
+
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nome)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Email)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Cargo)
+            </td>
+            <td>
+                @Html.ActionLink("Adicionar", "AdicionarParticipanteAoProjeto", new { id = item.Id, idProjeto = idProjeto })
+            </td>
+        </tr>
+    }
+
+</table>
